@@ -1,6 +1,8 @@
 <script setup lang="ts">
     import Aside from '../components/Aside.vue';  
     import MainUserList from '../components/MainUserList.vue';  
+    import MainTreelist from '@/components/MainTreelist.vue';
+    import TreeList from '@/components/TreeList.vue';
 </script>
 
 <template>
@@ -12,8 +14,10 @@
             <el-main class="sh-main">Main</el-main> -->
             <!-- <Aside/> -->
             <MainUserList/>
+            <!-- <MainTreelist/> -->
+            <!-- <TreeList/> -->
         </el-container> 
-        <!-- <el-footer class="sh-footer">Footer</el-footer> -->
+        <el-footer class="sh-footer">Footer</el-footer>
         <!-- <Footer/> -->
     </el-container>
 </template>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import '../utils/mock';
+import "@/utils/mockUser"
 import {getUserListService, addUserService, editUserService, deleteUserService, queryService} from '@/api/user'
 
 const inputName = ref('')
@@ -51,6 +51,7 @@ const addUser = async() => {
     const newUser = { ...userModel.value }
     const result = await addUserService(newUser)
     userList()
+    clearUserModel()
 }
 
 // 编辑用户信息
