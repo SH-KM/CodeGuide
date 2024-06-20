@@ -90,7 +90,7 @@ const showAddDrawer = () =>{
 </script>
 
 <template>
-    <el-main class="sh-main tmain">
+    <el-main class="tmain">
         <div class="header">
             <span>用户管理</span>
             <div class="extra">
@@ -115,7 +115,7 @@ const showAddDrawer = () =>{
             </el-form-item>
         </el-form>
         <!-- 用户列表 -->
-        <el-table :data="tableData" style="width: 100%">
+        <el-table :data="tableData" class="user-table">
             <el-table-column prop="id" label="ID" width="120" />
             <el-table-column prop="name" label="姓名" width="120" />
             <el-table-column prop="age" label="年龄" width="120" />
@@ -182,11 +182,20 @@ const showAddDrawer = () =>{
 <style scoped>
 .tmain {
     background-color: #f5f5f5;
+    height: 100vh;
 }
 
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.user-table {
+    width: 100%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 </style>

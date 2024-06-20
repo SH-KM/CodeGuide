@@ -23,6 +23,11 @@ export default defineConfig({
         secure: false, // 忽略ssl认证
         rewrite: (path) => path.startsWith('/api/oam/api') ? path.replace('/api/oam/api', '/oam/api') : path,
       },
-    },
+      '/api': {
+        target: 'http://localhost:8080', // 后台服务所在位置
+        changeOrigin: true, // 修改源
+        rewrite:(path)=>path.replace(/^\/api/,'')// api替换''
+      },
+    }
   }
 })
